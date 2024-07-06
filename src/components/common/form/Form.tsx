@@ -33,6 +33,7 @@ const FormDialog: React.FC<FormDialogProps> = ({buttonClassName}) => {
 
             if(data.friendEmail===data.yourEmail){
                 toast.error('Both Email should be different');
+                setLoading(false);
                 return;
             }
 
