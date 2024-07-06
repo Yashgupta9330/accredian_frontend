@@ -1,15 +1,17 @@
 import ai from "../../assets/ai.png"
 import FormDialog from "../common/form/Form";
+import MobileView from "./MobileView";
 const HowRefer:React.FC = () => {
     return (
-      <div className="w-full bg-[#EEF5FF]">
+      <>
+      <div className="hidden lg:block w-full bg-[#EEF5FF]">
         <h1 className="text-3xl font-bold text-center mb-10">
           How Do I <span className="text-blue-500">Refer?</span>
         </h1>
         <div className="relative w-full">
           <img src={ai} className="w-full" />
           <div className="flex items-center justify-between lg:pl-20 lg:pr-24 mb-8 absolute top-36 bottom-32 w-full">
-            <div className="w-1/3 text-center">
+            <div className="w-1/3 flex flex-col items-center justify-center">
               <div className="bg-white rounded-full p-6 shadow-lg inline-block mb-4">
                 <svg
                   className="w-12 h-12 text-blue-500"
@@ -77,6 +79,8 @@ const HowRefer:React.FC = () => {
           </div>
         </div>
       </div>
+      <MobileView/>
+      </>
     );
   };
 
