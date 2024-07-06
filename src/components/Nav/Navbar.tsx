@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Navitem from './Navitem';
 import logo from "../../assets/logo.png"
+import logo2 from "../../assets/logo2.png"
 import { IoIosArrowDown } from "react-icons/io";
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navItems = ["Refer", "Benifits", "Faqs", "Support"];
 
   return (
     <header className="w-full bg-white shadow-sm">
@@ -57,21 +59,23 @@ const Navbar: React.FC = () => {
           </svg>
         </button>
       </div>
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <nav className="px-4 pt-4 pb-2 space-y-2">
-            <Navitem href="#" active>
-              Refer & Earn
-            </Navitem>
-            <Navitem href="#">Resources</Navitem>
-            <Navitem href="#">About Us</Navitem>
-            <Navitem href="#">Login</Navitem>
-            <button className="mt-4 w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">
-              Try for free
-            </button>
-          </nav>
-        </div>
-      )}
+         <ul
+         className=  {isMenuOpen? "fixed md:hidden left-0 top-0 w-[60%] h-screen border-r text-white border-r-gray-900 bg-blue-600  ease-in-out duration-500 z-50"
+                  : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%] z-[150]"}
+       >
+         <li className="p-4">
+           <img src={logo2} />
+         </li>
+         {/* Mobile Navigation Items */}
+         {navItems.map((item) => (
+           <li
+             key={item}
+             className="p-4 border-b rounded-xl hover:bg-[#cccccc] hover:text-black duration-300 cursor-pointer border-gray-600"
+           >
+             {item}
+           </li>
+         ))}
+       </ul>
     </header>
   );
 };
