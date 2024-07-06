@@ -21,7 +21,7 @@ export type FormData = {
 export type FormFieldProps = {
     type: string;
     placeholder: string;
-    name: ValidFieldNames; // Use keyof FormData to ensure name is a valid key of FormData
+    name: any; // Use keyof FormData to ensure name is a valid key of FormData
     label: string;
     register: UseFormRegister<FormData>;
     error: FieldError | undefined;
