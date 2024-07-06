@@ -30,7 +30,7 @@ const FormDialog: React.FC<FormDialogProps> = ({buttonClassName}) => {
         setLoading(true);
         console.log(data);
         try {
-            const response = await axios.post('https://accredian-backend-iysu.onrender.com/api/referrals', data);
+            const response = await axios.post('https://accredian-backend-glsy.onrender.com/api/referrals', data);
 
             if (response.status === 201) {
                 toast.success('Referral Sent Successfully');
