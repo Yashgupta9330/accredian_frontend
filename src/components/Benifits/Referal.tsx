@@ -16,7 +16,7 @@ const Referal : React.FC = () => {
             <div className="bg-white w-4 h-4 rounded-full shadow-md transform duration-300 ease-in-out translate-x-6"></div>
             </div>
          </div>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-5 max-md:flex-col max-md:gap-0">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-5 max-md:flex-col max-md:gap-0">
                 <Programs/>
                 <Table/>
             </div>

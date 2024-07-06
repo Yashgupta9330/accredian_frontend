@@ -38,7 +38,7 @@ const Faq: React.FC = () => {
                             <div className="flex-auto text-lg font-semibold leading-7 text-blue-600">
                                 Do I need to have prior Product Management and Project Management experience to enroll in the program?
                             </div>
-                            {open1==true? <FaChevronUp onClick={()=>setOpen1(!open1)}/> : <FaChevronDown onClick={()=>setOpen1(!open2)}/>}
+                            {open1==true? <FaChevronUp className="font-semibold text-lg" onClick={()=>setOpen1(!open1)}/> : <FaChevronDown className="font-semibold text-7xl md:text-lg" onClick={()=>setOpen1(!open1)}/>}
                         </div>
 
                         <div className={`text-base leading-6 mb-10 mt-8 ${open1==false?'hidden':""}`}>

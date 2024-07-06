@@ -10,7 +10,7 @@ const Hero : React.FC = () => {
           alt="money"
           className="absolute w-auto h-28 rotate-180 -top-10"
         />
-        <div className="md:w-2/5 w-full sm:space-y-12 space-y-8 pt-20 pl-10">
+        <div className="md:w-2/5 w-full sm:space-y-10 space-y-8 pt-12 sm:pt-20 pl-10">
           <div className="sm:text-[72px] text-[56px] leading-[66px] font-bold">
             <h1 className="">Let&rsquo;s Learn</h1>
             <h1>& Earn</h1>
@@ -24,7 +24,7 @@ const Hero : React.FC = () => {
               </span>
             </span>
           </div>
-          <FormDialog  buttonClassName="w-40 h-12 bg-[#1A73E8] text-white rounded-md my-4"/>
+          <FormDialog  buttonClassName="w-40 h-12 bg-[#1A73E8] text-white rounded-md sm:mb-4"/>
         </div>
         <div className="relative md:block hidden w-3/5">
           <img
