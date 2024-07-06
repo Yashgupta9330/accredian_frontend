@@ -33,6 +33,7 @@ const FormDialog: React.FC<FormDialogProps> = ({buttonClassName}) => {
 
             if(data.friendEmail===data.yourEmail){
                 toast.error('Both Email should be different');
+                return;
             }
 
             const response = await axios.post('https://accredian-backend-glsy.onrender.com/api/referrals', data);
