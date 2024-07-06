@@ -30,6 +30,11 @@ const FormDialog: React.FC<FormDialogProps> = ({buttonClassName}) => {
         setLoading(true);
         console.log(data);
         try {
+
+            if(data.friendEmail===data.yourEmail){
+                toast.error('Both Email should be different');
+            }
+
             const response = await axios.post('https://accredian-backend-glsy.onrender.com/api/referrals', data);
 
             if (response.status === 201) {
@@ -57,6 +62,7 @@ const FormDialog: React.FC<FormDialogProps> = ({buttonClassName}) => {
 
     const handleCancel = () => {
         // Reset the form when Cancel is clicked
+        setLoading(false);
         reset();
         setOpen(false);
     };
