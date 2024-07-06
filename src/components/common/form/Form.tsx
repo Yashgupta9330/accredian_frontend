@@ -14,7 +14,7 @@ interface FormDialogProps {
 
 const FormDialog: React.FC<FormDialogProps> = ({buttonClassName}) => {
     const [open, setOpen] = useState(false);
-    const [responseMessage, setResponseMessage] = useState('');
+    //const [responseMessage, setResponseMessage] = useState('');
     const [loading, setLoading] = useState(false);
 
     const {
@@ -41,19 +41,19 @@ const FormDialog: React.FC<FormDialogProps> = ({buttonClassName}) => {
 
             if (response.status === 201) {
                 toast.success('Referral Sent Successfully');
-                setResponseMessage(response.data.message);
+                // setResponseMessage(response.data.message);
                 console.log(response.data.message)
             } 
             else {
                 toast.error("error submitting form",response.data.errors);
-                setResponseMessage(response.data.errors ? response.data.errors.join(', ') : 'Something went wrong');
+                //setResponseMessage(response.data.errors ? response.data.errors.join(', ') : 'Something went wrong');
                 console.log(response.data.errors)
             }
         } 
         catch (error) {
             console.error('Error submitting form:', error);
             toast.error("error submitting form");
-            setResponseMessage('An error occurred while submitting the form');
+           // setResponseMessage('An error occurred while submitting the form');
         }
 
         // Close the dialog
